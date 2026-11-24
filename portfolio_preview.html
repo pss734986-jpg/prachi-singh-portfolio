@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prachi Singh — Portfolio Explorer</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .tab-btn.active {
+      background-color: #2563EB;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 p-4 antialiased">
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden">
+    
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4 border-b border-slate-800">
+      <div class="flex items-center gap-3">
+        <div class="flex gap-1.5">
+          <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+        </div>
+        <div>
+          <span class="font-bold text-sm tracking-tight text-white">Prachi Singh — Marketing Portfolio</span>
+          <span class="ml-2 text-[11px] bg-slate-800 text-sky-400 px-2 py-0.5 rounded-full font-mono font-medium">Fast Production Build</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="http://localhost:8080/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-semibold transition shadow-sm flex items-center gap-1.5">
+          <span>Open Live Site (http://localhost:8080)</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Navigation Tabs -->
+    <div class="bg-slate-100 border-b border-slate-200 px-5 py-2.5 flex items-center gap-2 overflow-x-auto text-xs font-medium">
+      <button onclick="switchTab('overview')" id="tab-overview" class="tab-btn active px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        🏠 Overview & 3 Pillars
+      </button>
+      <button onclick="switchTab('nykaa')" id="tab-nykaa" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        🛍️ Nykaa Pink Friday (₹88L)
+      </button>
+      <button onclick="switchTab('shownex')" id="tab-shownex" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        🎬 Shownex Marketing Executive
+      </button>
+      <button onclick="switchTab('linkassist')" id="tab-linkassist" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        💬 LinkAssist WhatsApp Funnel
+      </button>
+      <button onclick="switchTab('calculator')" id="tab-calculator" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        📈 Pipeline Lift Calculator
+      </button>
+      <button onclick="switchTab('vault')" id="tab-vault" class="tab-btn px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition whitespace-nowrap">
+        📁 Playbooks & Vault
+      </button>
+    </div>
+
+    <!-- Tab Panels Container -->
+    <div class="p-6 md:p-8 space-y-6">
+
+      <!-- TAB 1: OVERVIEW & PILLARS -->
+      <div id="panel-overview" class="tab-panel space-y-6">
+        
+        <!-- Hero Header -->
+        <div class="space-y-3">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge bg-blue-50 text-blue-700 border border-blue-200">
+              ● LinkedIn Marketing
+            </span>
+            <span class="badge bg-amber-50 text-amber-800 border border-amber-200">
+              ● Statics & Creative Design
+            </span>
+            <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-200">
+              ● Client Interactions & WhatsApp Funnels
+            </span>
+          </div>
+
+          <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug">
+            Driving Growth Through Research, Creative Direction & Inbound Funnels
+          </h1>
+
+          <p class="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl">
+            Hi, I’m <strong>Prachi Singh</strong> — a Marketing Specialist grounded in consumer psychology, strategic content distribution, and conversion funnels. At <strong>Nykaa</strong>, I managed offline marketing activations, in-store footfall drives, and discount offers during the Pink Friday Sale. At <strong>Shownex</strong>, as <strong>Marketing Executive</strong>, I created structured content calendars, prepared multi-format content, and led consumer research.
+          </p>
+        </div>
+
+        <!-- 4 Authentic Metric Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl border-l-4 border-l-blue-600">
+            <div class="text-2xl md:text-3xl font-extrabold text-blue-600 font-mono">₹88L</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Pink Friday Sales</div>
+            <div class="text-[11px] text-slate-500">Nykaa Retail Activation</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl border-l-4 border-l-emerald-600">
+            <div class="text-2xl md:text-3xl font-extrabold text-emerald-600 font-mono">50+</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Demos Booked</div>
+            <div class="text-[11px] text-slate-500">LinkAssist WhatsApp Funnel</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl border-l-4 border-l-amber-600">
+            <div class="text-2xl md:text-3xl font-extrabold text-amber-600 font-mono">100K+</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Organic Views</div>
+            <div class="text-[11px] text-slate-500">Shownex Content Calendars</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 p-4 rounded-xl border-l-4 border-l-purple-600">
+            <div class="text-2xl md:text-3xl font-extrabold text-purple-600 font-mono">25%+</div>
+            <div class="text-xs font-bold text-slate-900 mt-1">Demo Conversion</div>
+            <div class="text-[11px] text-slate-500">Inbound Qualification</div>
+          </div>
+        </div>
+
+        <!-- Direct Launcher Action -->
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex flex-wrap items-center justify-between gap-3">
+          <div class="text-xs text-blue-900">
+            <strong>Ready to browse?</strong> The full responsive multi-page website is live on your local machine.
+          </div>
+          <a href="http://localhost:8080/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-2 rounded-lg font-bold shadow-sm transition">
+            Open in Browser (http://localhost:8080) ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 2: NYKAA BEAUTY -->
+      <div id="panel-nykaa" class="tab-panel space-y-5 hidden">
+        <div>
+          <span class="badge bg-rose-50 text-rose-700 border border-rose-200">Retail & Omnichannel Strategy</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            Nykaa Beauty: Pink Friday Sale & Offline Activations (₹88L Sales)
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">Role: Management Trainee / Assistant Store Manager • 60+ Brands • 12,000+ SKUs</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-blue-600 text-sm block mb-1">01. Pink Friday Campaign</strong>
+            Managed promotional discount tiers and high-impact store merchandising across 60+ prestige and masstige beauty brands.
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-emerald-600 text-sm block mb-1">02. Offline Activations</strong>
+            Organized in-store makeover zones and consultations that converted footfall into high-value basket sizes (₹5,000+ threshold).
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-purple-600 text-sm block mb-1">03. Discount Offer Management</strong>
+            Streamlined brand offer stacking, trained 12–15 floor beauty advisors, and generated ₹88L in store sales.
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+          <span>Read the full case study with uncropped creatives on the live site:</span>
+          <a href="http://localhost:8080/work.html#nykaa" target="_blank" class="text-blue-600 font-bold hover:underline">
+            View Nykaa Case Study ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 3: SHOWNEX APP -->
+      <div id="panel-shownex" class="tab-panel space-y-5 hidden">
+        <div>
+          <span class="badge bg-amber-50 text-amber-800 border border-amber-200">Social Media & Consumer Research</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            Shownex: Marketing Executive (Content Calendars & Research)
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">Role: Marketing Executive • Organic Video Engine • US/UK Streaming Audiences</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-amber-600 text-sm block mb-1">01. Content Calendars</strong>
+            Built structured monthly editorial matrices balancing high-velocity movie trivia reels, curation carousels, and casting updates.
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-blue-600 text-sm block mb-1">02. Content Preparation</strong>
+            Produced short-form reels, caption copy, and visual statics driving 100K+ organic impressions and 200+ app installs.
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-emerald-600 text-sm block mb-1">03. Audience & Trend Research</strong>
+            Conducted daily social listening across Reddit, Letterboxd, and Instagram to discover high-affinity cinema discussions.
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+          <span>Watch the 6 video reels and inspect the calendar matrix:</span>
+          <a href="http://localhost:8080/work.html#shownex" target="_blank" class="text-blue-600 font-bold hover:underline">
+            View Shownex Deep Dive ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 4: LINKASSIST FUNNEL -->
+      <div id="panel-linkassist" class="tab-panel space-y-5 hidden">
+        <div>
+          <span class="badge bg-emerald-50 text-emerald-700 border border-emerald-200">B2B SaaS / Inbound Funnel</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            LinkAssist: LinkedIn Marketing & WhatsApp Inbound Funnel
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">Role: Marketing Specialist • 50+ Qualified Demos • 25%+ Conversion</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+            <strong class="text-blue-600 text-sm block">Channel 1: LinkedIn Thought Leadership</strong>
+            <p class="text-slate-600">Created problem-led posts addressing cold outreach fatigue for agency founders, generating inbound DMs without paid ad spend.</p>
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+            <strong class="text-emerald-600 text-sm block">Channel 2: 1-on-1 WhatsApp Conversations</strong>
+            <p class="text-slate-600">Replaced slow email back-and-forth with rapid WhatsApp qualification, booking 50+ live demo calls with a 25%+ customer conversion rate.</p>
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+          <span>Inspect the complete WhatsApp funnel workflow:</span>
+          <a href="http://localhost:8080/work.html#linkassist" target="_blank" class="text-blue-600 font-bold hover:underline">
+            View LinkAssist Case Study ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 5: CALCULATOR EXPLAINER -->
+      <div id="panel-calculator" class="tab-panel space-y-5 hidden">
+        <div>
+          <span class="badge bg-blue-50 text-blue-700 border border-blue-200">Interactive Modeling</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            What is the Growth & Pipeline Lift Calculator?
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">An empirical tool to quantify how eliminating lead decay unlocks revenue.</p>
+        </div>
+
+        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-3 leading-relaxed">
+          <p>
+            In performance marketing, marketing teams often default to spending more money on top-of-funnel ads when their biggest bottleneck is actually <strong>lead decay</strong>. Over 70% of high-intent prospects drop off when forced to fill out long forms or wait 24 hours for an email reply.
+          </p>
+          <p>
+            By introducing an <strong>instant WhatsApp conversational funnel</strong>, conversion rates typically lift by <strong>+10% to +25%+</strong>. This calculator demonstrates how much net new revenue and pipeline you unlock from the <em>exact same ad spend</em> without increasing your budget.
+          </p>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+          <span>Try the live interactive slider calculator on the homepage:</span>
+          <a href="http://localhost:8080/#calculator-section" target="_blank" class="text-blue-600 font-bold hover:underline">
+            Open Interactive Calculator ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 6: PLAYBOOKS & VAULT -->
+      <div id="panel-vault" class="tab-panel space-y-5 hidden">
+        <div>
+          <span class="badge bg-purple-50 text-purple-700 border border-purple-200">Authentic Deliverables</span>
+          <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-1">
+            Marketing Playbooks & Creative Vault
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5">No fake code or repos — authentic marketing systems and real creative assets.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block font-mono text-sm mb-1">b2b-whatsapp-funnel</strong>
+            <p class="text-slate-600">The 4-stage inbound qualification script that delivered 50+ booked demos.</p>
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block font-mono text-sm mb-1">nykaa-activation-model</strong>
+            <p class="text-slate-600">The Pink Friday discount architecture that scaled store revenue to ₹88L.</p>
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-slate-900 block font-mono text-sm mb-1">shownex-calendar-matrix</strong>
+            <p class="text-slate-600">Weekly content distribution calendar yielding 100K+ organic video views.</p>
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-between text-xs">
+          <span>View the full creative vault with videos and statics:</span>
+          <a href="http://localhost:8080/#vault" target="_blank" class="text-blue-600 font-bold hover:underline">
+            Explore Creative Vault ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Files & Links Bar -->
+    <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-800">Direct Local Links:</span>
+        <a href="http://localhost:8080/index.html" target="_blank" class="hover:text-blue-600 hover:underline">Home</a> •
+        <a href="http://localhost:8080/work.html" target="_blank" class="hover:text-blue-600 hover:underline">Work (Case Studies)</a> •
+        <a href="http://localhost:8080/about.html" target="_blank" class="hover:text-blue-600 hover:underline">About</a> •
+        <a href="http://localhost:8080/contact.html" target="_blank" class="hover:text-blue-600 hover:underline">Contact</a>
+      </div>
+
+      <div>
+        <a href="http://localhost:8080/" target="_blank" class="text-blue-600 hover:underline font-bold">
+          Launch Portfolio (http://localhost:8080/) ↗
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      const activePanel = document.getElementById('panel-' + tabId);
+      if (activePanel) activePanel.classList.remove('hidden');
+      const activeBtn = document.getElementById('tab-' + tabId);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
